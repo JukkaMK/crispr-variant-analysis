@@ -1,0 +1,11 @@
+variant_id	gene	chrom	pos	ref	alt	consequence	impact	allele_freq
+var1	TP53	17	7676153	C	T	missense_variant	MODERATE	0.0012
+var2	BRCA1	17	43045729	A	G	stop_gained	HIGH	0.0001
+var3	EGFR	7	55249071	G	A	synonymous_variant	LOW	0.0120
+var4	CFTR	7	117559593	T	C	splice_region_variant	MODERATE	0.0008
+var5	HBB	11	5227002	A	T	missense_variant	MODERATE	0.0045
+var6	KRAS	12	25245350	G	T	missense_variant	MODERATE	0.0021
+var7	APOE	19	44908684	C	T	missense_variant	MODERATE	0.1450
+var8	MTHFR	1	11856378	C	T	missense_variant	MODERATE	0.0820
+var9	PCSK9	1	55505647	G	A	stop_gained	HIGH	0.0002
+var10	LMNA	1	156084382	C	T	missense_variant	MODERATE	0.0006
