@@ -28,6 +28,7 @@ The workflow illustrates how biological interpretation can be layered on top of 
 
 The main analysis notebook is available here:
 notebooks/01_basic_variant_exploration.ipynb
+
 data/variants_demo.tsv
 
 ## Variant scoring (concept)
