@@ -1,8 +1,5 @@
 # CRISPR Variant Analysis
-
-This project explores how genetic variants affect gene regions in a
-CRISPR-related context, with a focus on biological interpretation rather
-than pipeline complexity.
+This repository demonstrates a lightweight and interpretable workflow for exploring and prioritizing genetic variants in a CRISPR-related context using Python and Jupyter notebooks. The focus is on biological interpretation of variant effects rather than building a complex analysis pipeline.
 
 ## Background
 Understanding the functional impact of variants is essential in
