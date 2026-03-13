@@ -1,64 +1,85 @@
 # CRISPR Variant Analysis
-This repository demonstrates a lightweight and interpretable workflow for exploring and prioritizing genetic variants in a CRISPR-related context using Python and Jupyter notebooks. The focus is on biological interpretation of variant effects rather than building a complex analysis pipeline.
+
+This repository demonstrates a lightweight and interpretable workflow for exploring and prioritizing genetic variants in a CRISPR-related context using Python and Jupyter notebooks.
+
+The focus is on biological interpretation of variant effects rather than building a complex analysis pipeline.
 
 ## Background
-Understanding the functional impact of variants is essential in
-genome editing and gene therapy research.
+
+Understanding the functional impact of genetic variants is essential in genome editing and gene therapy research.
 
 ## Data
-Example variant data is used to demonstrate analysis workflows.
-(No sensitive or patient data.)
 
-## Methods
-- Variant annotation
-- Basic filtering and classification
-- Exploratory analysis using Python/R
-
-## Status
-Project setup and initial exploration.
-
-## Results
-The notebook demonstrates a simple exploratory workflow for prioritizing genetic variants in a CRISPR-related context.  
-Starting from a small demo dataset, the analysis classifies variants by consequence type, inspects basic properties such as allele frequency, and produces a ranked list of candidate variants.
-
-The workflow illustrates how biological interpretation can be layered on top of basic annotations to highlight variants that may have a stronger functional impact on genes or regulatory regions.
-
-The main analysis notebook is available here:
-notebooks/01_basic_variant_exploration.ipynb
+A small demonstration dataset of annotated variants is included:
 
 data/variants_demo.tsv
 
-## Variant scoring (concept)
-In this project, variants are not interpreted as clinically pathogenic or benign.  
-Instead, a simple transparent scoring approach is used to prioritize variants that may warrant further biological investigation.
+The dataset contains information such as:
 
-The ranking is based on several common signals used in variant interpretation:
+- gene
+- variant consequence
+- predicted impact
+- allele frequency
 
-- **Variant consequence** (e.g. frameshift, stop gained, missense)
-- **Population allele frequency**, where rare variants receive higher priority
-- **Predicted functional impact**, when prediction scores are available
+## Analysis workflow
 
-The resulting score is therefore best interpreted as a **prioritization score**, not as a diagnostic classification.  
-This approach mirrors the early exploratory steps commonly used in genomics pipelines where thousands of variants must be reduced to a smaller set of biologically interesting candidates. :contentReference[oaicite:0]{index=0}
-## Key Findings
+The analysis is implemented in two notebooks:
 
-- The majority of variants show a MODERATE predicted impact (7/10),
-  consistent with missense changes commonly observed in coding regions.
-- Two variants are classified as HIGH impact (e.g. stop-gained),
-  representing high-priority candidates for further biological interpretation.
-- Seven variants have an allele frequency below 1%, highlighting a set
-  of rare variants potentially relevant for functional or clinical follow-up.
+1. **01_basic_variant_exploration.ipynb**  
+   Exploration of variant annotations and dataset structure.
 
-## Interpretation
+2. **02_variant_scoring_demo.ipynb**  
+   Demonstrates a simple scoring approach combining:
+   - predicted variant impact
+   - allele frequency
+   - CRISPR target gene prioritization
 
-This exploratory analysis demonstrates a typical variant landscape where
-most observations fall into moderate-impact categories, while a small subset
-of rare, high-impact variants emerges as biologically interesting candidates.
-Such variants would normally be prioritized for downstream annotation,
-functional validation, or integration with external databases.
+## Results
 
-## Next Steps
+The variant scoring workflow prioritizes variants based on predicted functional impact and allele frequency.
 
-- Integrate external annotation sources (e.g. gene function or disease relevance)
-- Apply additional filtering criteria (impact + rarity + gene context)
-- Extend the analysis to larger or real-world variant datasets
+Variants with **HIGH predicted impact** receive the highest base scores, particularly when combined with **low allele frequency**, reflecting the increased likelihood that rare variants have stronger biological effects.
+
+The CRISPR candidate prioritization step further highlights variants occurring in genes commonly studied in genome editing contexts. In this demonstration dataset, variants in genes such as **BRCA1** and **PCSK9** appear among the highest-ranked candidates.
+
+Overall, the scoring approach illustrates how simple biological heuristics can be combined to prioritize potentially relevant variants for downstream genome editing or functional studies.
+
+## Key findings
+
+- High-impact variants dominate the top scoring candidates.
+- Rare variants receive higher prioritization.
+- Combining variant-level scoring with gene-level prioritization highlights biologically relevant targets.
+
+## Visualizations
+
+The notebooks generate several plots:
+
+- variant score distribution
+- CRISPR candidate counts
+- gene × impact heatmap
+
+## Project structure
+
+```
+crispr-variant-analysis/
+│
+├─ data/
+│   └─ variants_demo.tsv
+│
+├─ notebooks/
+│   ├─ 01_basic_variant_exploration.ipynb
+│   └─ 02_variant_scoring_demo.ipynb
+│
+├─ src/
+├─ .gitignore
+└─ README.md
+```
+
+## Requirements
+
+Python packages used:
+
+- pandas
+- numpy
+- matplotlib
+- jupyterasets
