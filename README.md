@@ -1,5 +1,7 @@
 # CRISPR Variant Analysis
 
+Author Jukka M Kiuru
+
 This repository demonstrates a lightweight and interpretable workflow for exploring and prioritizing genetic variants in a CRISPR-related context using Python and Jupyter notebooks.
 
 The focus is on biological interpretation of variant effects rather than building a complex analysis pipeline.
