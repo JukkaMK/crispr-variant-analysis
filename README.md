@@ -84,4 +84,4 @@ Python packages used:
 - pandas
 - numpy
 - matplotlib
-- jupyterasets
+- jupyter
