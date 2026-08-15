@@ -35,7 +35,8 @@ The analysis is implemented in two notebooks:
    - predicted variant impact
    - allele frequency
    - CRISPR target gene prioritization
-
+   - 
+The variant score is a simple, transparent heuristic developed for demonstration purposes. It combines predicted variant impact with allele frequency, assigning additional weight to lower-frequency variants. The score is intended for prioritization within this demonstration workflow and should not be interpreted as a validated measure of pathogenicity or biological effect.
 ## Results
 
 The variant scoring workflow prioritizes variants based on predicted functional impact and allele frequency.
