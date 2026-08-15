@@ -41,7 +41,7 @@ The variant score is a simple, transparent heuristic developed for demonstration
 
 The variant scoring workflow prioritizes variants based on predicted functional impact and allele frequency.
 
-Variants with **HIGH predicted impact** receive the highest base scores, particularly when combined with **low allele frequency**, reflecting the increased likelihood that rare variants have stronger biological effects.
+Variants with **HIGH predicted impact** receive the highest base scores, particularly when combined with **low allele frequency**, as lower-frequency variants are assigned additional weight in the prioritization heuristic.
 
 The CRISPR candidate prioritization step further highlights variants occurring in genes commonly studied in genome editing contexts. In this demonstration dataset, variants in genes such as **BRCA1** and **PCSK9** appear among the highest-ranked candidates.
 
