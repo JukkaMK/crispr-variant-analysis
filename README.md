@@ -43,7 +43,7 @@ The variant scoring workflow prioritizes variants based on predicted functional 
 
 Variants with **HIGH predicted impact** receive the highest base scores, particularly when combined with **low allele frequency**, as lower-frequency variants are assigned additional weight in the prioritization heuristic.
 
-The CRISPR candidate prioritization step further highlights variants occurring in genes commonly studied in genome editing contexts. In this demonstration dataset, variants in genes such as **BRCA1** and **PCSK9** appear among the highest-ranked candidates.
+The CRISPR candidate prioritization step uses a predefined example set of genes commonly studied in genome editing contexts. In this demonstration dataset, variants in genes such as BRCA1 and PCSK9 appear among the highest-ranked candidates.
 
 Overall, the scoring approach illustrates how simple biological heuristics can be combined to prioritize potentially relevant variants for downstream genome editing or functional studies.
 
