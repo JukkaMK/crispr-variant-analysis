@@ -51,7 +51,7 @@ Overall, the scoring approach illustrates how simple biological heuristics can b
 
 - High-impact variants dominate the top scoring candidates.
 - Rare variants receive higher prioritization.
-- Combining variant-level scoring with gene-level prioritization highlights biologically relevant targets.
+- Combining variant-level scoring withpredefined gene-level prioritization highlights candidate variants of interest.
 
 ## Visualizations
 
