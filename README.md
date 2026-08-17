@@ -36,6 +36,7 @@ The analysis is implemented in two notebooks:
    - allele frequency
    - CRISPR target gene prioritization
  ![Variant prioritization by score](figures/variant_prioritization_by_score.png)
+
 The variant score is a simple, transparent heuristic developed for demonstration purposes. It combines predicted variant impact with allele frequency, assigning additional weight to lower-frequency variants. The score is intended for prioritization within this demonstration workflow and should not be interpreted as a validated measure of pathogenicity or biological effect.
 ## Results
 
@@ -61,6 +62,8 @@ The notebooks generate several plots:
 - CRISPR candidate counts
 - gene × impact heatmap
 ![Variant prioritization by score](variant_prioritization_by_score.png)
+
+Variant prioritization based on the demonstration scoring heuristic. Higher scores indicate variants prioritized by predicted functional impact and allele frequency. BRCA1 and PCSK9 rank highest in this example dataset.
 ## Project structure
 
 ```
