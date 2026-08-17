@@ -64,6 +64,10 @@ The notebooks generate several plots:
 ![Variant prioritization by score](variant_prioritization_by_score.png)
 
 Variant prioritization based on the demonstration scoring heuristic. Higher scores indicate variants prioritized by predicted functional impact and allele frequency. BRCA1 and PCSK9 rank highest in this example dataset.
+
+![Gene × impact mean score heatmap](gene_impact_heatmap.png)
+
+Gene × impact heatmap showing the mean prioritization score for each gene and predicted impact category. High-impact variants in BRCA1 and PCSK9 receive the highest scores in this demonstration dataset.
 ## Project structure
 
 ```
